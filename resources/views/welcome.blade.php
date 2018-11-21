@@ -10,10 +10,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.23/css/uikit.min.css"/>
     <link rel="stylesheet" href="{!! asset('css/app.css') !!}">
 
+
+
     <!-- UIkit JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.23/js/uikit.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.23/js/uikit-icons.min.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -30,27 +32,28 @@
             <div class="uk-margin">
                 <div class="uk-inline">
                     <span class="uk-form-icon" uk-icon="icon: user; ratio: 0.7"></span>
-                    <input class="uk-input uk-form-small" id="form-stacked-text" type="text" placeholder="Login">
+                    <input class="uk-input uk-form-small" type="text" placeholder="Login">
                 </div>
             </div>
 
             <div class="uk-margin">
                 <div class="uk-inline">
                     <span class="uk-form-icon" uk-icon="icon: lock; ratio: 0.7"></span>
-                    <input class="uk-input uk-form-small" id="form-stacked-text" type="password"
+                    <input class="uk-input uk-form-small" type="password"
                            placeholder="Password">
                 </div>
             </div>
         </form>
         <div class="uk-flex uk-flex-center uk-flex-around">
-            <button class="uk-icon-link uk-margin-small-right" uk-icon="facebook"></button>
-            <button class="uk-icon-link uk-margin-small-right" uk-icon="google-plus"></button>
-            <button class="uk-icon-link uk-margin-small-right" uk-icon="vimeo"></button>
+            <button class="uk-icon-link uk-margin-small-right" id="facebook" uk-icon="facebook"></button>
+            <button class="uk-icon-link uk-margin-small-right" id="google-plus" uk-icon="google-plus"></button>
+            <button class="uk-icon-link uk-margin-small-right" id="vk" uk-icon="vimeo"></button>
         </div>
 
     </div>
 </div>
 </div>
 
+<script src="{!! asset('js/app.js') !!}"></script>
 </body>
 </html>
