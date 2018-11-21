@@ -18,32 +18,38 @@
 <body>
 
 <div class="uk-flex uk-flex-center uk-flex-middle" style="height: 100%">
-    <div class="uk-card uk-card-default uk-card-body">
-        <h3 class="uk-card-title uk-flex uk-flex-center">Login</h3>
-            <form>
-                <div class="uk-margin">
-                    <div class="uk-inline">
-                        <span class="uk-form-icon" uk-icon="icon: user; ratio: 0.7"></span>
-                        <input class="uk-input uk-form-small" id="form-stacked-text" type="text" placeholder="Login">
-                    </div>
-                </div>
+    <div class="uk-card uk-card-default uk-card-body ">
+        <div class="uk-flex uk-flex-right uk-flex-around">
+            <div class="uk-flex uk-flex-column">
+                <img src="{!! asset('rodger.png') !!}" style="height:48px; width:48px" uk-tooltip="title: Hello,I'm Rodger!; pos: right">
+                <h3 style="margin-top: 20%">Login</h3>
+            </div>
+        </div>
 
-                <div class="uk-margin">
-                    <div class="uk-inline">
-                        <span class="uk-form-icon" uk-icon="icon: lock; ratio: 0.7"></span>
-                        <input class="uk-input uk-form-small" id="form-stacked-text" type="password"
-                               placeholder="Password">
-                    </div>
+        <form>
+            <div class="uk-margin">
+                <div class="uk-inline">
+                    <span class="uk-form-icon" uk-icon="icon: user; ratio: 0.7"></span>
+                    <input class="uk-input uk-form-small" id="form-stacked-text" type="text" placeholder="Login">
                 </div>
-            </form>
-           <div class="uk-flex uk-flex-center uk-flex-around">
-               <button class="uk-icon-link uk-margin-small-right" uk-icon="facebook"></button>
-               <button  class="uk-icon-link uk-margin-small-right" uk-icon="google-plus"></button>
-               <button class="uk-icon-link uk-margin-small-right" uk-icon="vimeo"></button>
-           </div>
+            </div>
+
+            <div class="uk-margin">
+                <div class="uk-inline">
+                    <span class="uk-form-icon" uk-icon="icon: lock; ratio: 0.7"></span>
+                    <input class="uk-input uk-form-small" id="form-stacked-text" type="password"
+                           placeholder="Password">
+                </div>
+            </div>
+        </form>
+        <div class="uk-flex uk-flex-center uk-flex-around">
+            <button class="uk-icon-link uk-margin-small-right" uk-icon="facebook"></button>
+            <button class="uk-icon-link uk-margin-small-right" uk-icon="google-plus"></button>
+            <button class="uk-icon-link uk-margin-small-right" uk-icon="vimeo"></button>
+        </div>
 
     </div>
-    </div>
+</div>
 </div>
 
 </body>
