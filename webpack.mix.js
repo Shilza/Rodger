@@ -12,6 +12,9 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-    .styles(['resources/css/general.css'], 'public/css/app.css');
+    .styles([
+        'resources/css/general.css',
+        'resources/css/login-form.css',
+    ], 'public/css/app.css');
 
 mix.disableNotifications();

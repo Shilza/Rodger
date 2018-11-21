@@ -21,8 +21,8 @@
     <div class="uk-card uk-card-default uk-card-body ">
         <div class="uk-flex uk-flex-right uk-flex-around">
             <div class="uk-flex uk-flex-column">
-                <img src="{!! asset('rodger.png') !!}" style="height:48px; width:48px" uk-tooltip="title: Hello,I'm Rodger!; pos: right">
-                <h3 style="margin-top: 20%">Login</h3>
+                <img src="{!! asset('rodger.png') !!}" class="login-logo" uk-tooltip="title: Hello,I'm Rodger!; pos: right">
+                <h3 class="login-form-header">Login</h3>
             </div>
         </div>
 
