@@ -2,13 +2,13 @@
 
 namespace App\Utils;
 
-class FileHelper
+class DirectoryHelper
 {
-    public static function getUniqueFileName($path = '', $extension = '')
+    public static function getUniqueDirectoryName(string $path)
     {
         do {
             $name = md5(microtime() . rand(0, 9999));
-            $file = $path . $name . $extension;
+            $file = $path . $name;
         } while (file_exists($file));
 
         return $name;
