@@ -3,13 +3,14 @@
 namespace App\Authorization;
 
 
+use App\Exceptions\AuthorizationException;
 use App\Exceptions\MakeDirectoryException;
 use App\Exceptions\RequestException;
-use App\Utils\CURLHelper;
-use App\Utils\HTMLParseHelper;
+use App\Utils\RR\HTMLParseHelper;
+use App\Utils\RR\CURLHelper;
 
 abstract class AuthorizationHelper{
-    const COOKIE_PATH = __DIR__.'/../../cookie';
+    const COOKIE_PATH = 'storage/app/';
 
     protected $curl;
     protected $login;
@@ -41,18 +42,31 @@ abstract class AuthorizationHelper{
     }
 
     /**
+     * @throws AuthorizationException
      * @throws MakeDirectoryException
+     * @throws RequestException
      */
     public function authorize() : void {
-        $cookiePath = static::getCookieDirectory(array_pop(
-            explode(DIRECTORY_SEPARATOR, static::class))) . "/$this->login";
+        $arr = explode(DIRECTORY_SEPARATOR, static::class);
+        $cookiePath = static::getCookieDirectory(array_pop($arr)) . "/$this->login";
+
         $this->deleteIfExpired($cookiePath);
         $this->logIn($cookiePath);
+
         $this->authorizeRR($cookiePath);
     }
 
-    abstract protected function logIn(string $cookiePath) : void;
+    /**
+     * @param string $cookiePath
+     */
+    abstract public function logIn(string $cookiePath) : void;
 
+    /**
+     * @param string $cookiePath
+     * @throws AuthorizationException
+     * @throws RequestException
+     * @throws MakeDirectoryException
+     */
     abstract protected function authorizeRR(string $cookiePath) : void;
 
     /**
@@ -75,7 +89,7 @@ abstract class AuthorizationHelper{
      */
     protected function checkRRCookies(string $cookieRR){
         if(preg_match('/var id.+;/',
-            $this->curl->get('rivalregions.com', $headers, 1, null, $cookieRR),
+            $this->curl->get('http://rivalregions.com', $headers, 1, null, $cookieRR),
             $matches))
             return HTMLParseHelper::getNumeric($matches[0]);
 

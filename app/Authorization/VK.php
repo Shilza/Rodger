@@ -6,10 +6,11 @@ namespace App\Authorization;
 use App\Exceptions\AuthorizationException;
 use App\Exceptions\MakeDirectoryException;
 use App\Exceptions\RequestException;
-use App\Utils\HTMLParseHelper as Parser;
+use App\Utils\RR\HTMLParseHelper as Parser;
 
 //TODO: REFACTOR
-class VK extends AuthorizationHelper{
+class VK extends AuthorizationHelper
+{
     const OAUTH_URL =
         'https://oauth.vk.com/authorize?client_id=3524629&display=page&scope=notify,friends&redirect_uri=http://rivalregions.com/main/vklogin&response_type=code&state=';
     const COOKIE_CHECK_URL = 'https://m.vk.com/id0';
@@ -19,7 +20,8 @@ class VK extends AuthorizationHelper{
      * @param string $cookiePath
      * @throws RequestException
      */
-    protected function logIn(string $cookiePath) : void{
+    public function logIn(string $cookiePath): void
+    {
         if (!file_exists($cookiePath)) {
             preg_match('/https:\/\/login.vk.com.+?"/',
                 $this->curl->get("https://m.vk.com", $headers, 0, $cookiePath), $matches);
@@ -35,7 +37,8 @@ class VK extends AuthorizationHelper{
      * @throws MakeDirectoryException
      */
     //TODO: REFACTOR
-    protected function authorizeRR(string $cookiePath) : void {
+    protected function authorizeRR(string $cookiePath): void
+    {
         $id = $this->getID();
         $cookieRR = static::getCookieDirectory() . DIRECTORY_SEPARATOR . $id;
         if (file_exists($cookieRR) && ($this->force || $this->checkRRCookies($cookieRR) === false))
@@ -45,7 +48,7 @@ class VK extends AuthorizationHelper{
             $body =
                 $this->curl->get(static::OAUTH_URL, $headers, 1, null, $cookiePath);
 
-            if(strstr($body, 'https://login.vk.com/?act=grant_access')) {
+            if (strstr($body, 'https://login.vk.com/?act=grant_access')) {
                 $this->curl->get(
                     Parser::cut(
                         substr($body, strpos($body, 'https://login.vk.com/?act=grant_access')), '"'),
@@ -75,17 +78,18 @@ class VK extends AuthorizationHelper{
      * @param string $body
      * @return string[]
      */
-    private function getParametersFromBody(string $body) : array{
+    private function getParametersFromBody(string $body): array
+    {
         preg_match('/name="id" value="\d+">/', $body, $matches);
         $parameters['id'] = Parser::getNumeric($matches[0]);
         preg_match('/name="access_token".+"/', $body, $matches);
         preg_match('/value=".+"/', $matches[0], $matches);
-        preg_match('/".+"/',$matches[0], $matches);
+        preg_match('/".+"/', $matches[0], $matches);
         preg_match('/[^"].+[^"]/', $matches[0], $matches);
         $parameters['accessToken'] = trim($matches[0]);
         preg_match('/name="hash".+"/', $body, $matches);
         preg_match('/value=".+"/', $matches[0], $matches);
-        preg_match('/".+"/',$matches[0], $matches);
+        preg_match('/".+"/', $matches[0], $matches);
         preg_match('/[^"].+[^"]/', $matches[0], $matches);
         $parameters['hash'] = trim($matches[0]);
         return $parameters;
@@ -95,19 +99,24 @@ class VK extends AuthorizationHelper{
      * @param string $headers
      * @return string[]
      */
-    private function getParametersFromHeaders(string $headers) : array{
+    private function getParametersFromHeaders(string $headers): array
+    {
         preg_match(static::HEADERS_PARSING_REGEX, $headers, $matches);
         return ['accessToken' => $matches[1], 'id' => $matches[2], 'hash' => trim($matches[3])];
     }
 
     /**
-     * @return string
+     * @return null|string|string[]
+     * @throws AuthorizationException
      * @throws MakeDirectoryException
      */
-    private function getID(){
-            $cookie = file_get_contents(static::getCookieDirectory('VK')
-                        . DIRECTORY_SEPARATOR . $this->login);
-            preg_match('/\tl\t\d+/', $cookie, $matches);
-            return Parser::getNumeric($matches[0]);
+    private function getID()
+    {
+        $cookie = file_get_contents(static::getCookieDirectory('VK')
+            . DIRECTORY_SEPARATOR . $this->login);
+        if(!preg_match('/\tl\t\d+/', $cookie, $matches))
+            throw new AuthorizationException();
+
+        return Parser::getNumeric($matches[0]);
     }
 }

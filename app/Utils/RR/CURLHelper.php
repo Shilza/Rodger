@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Utils;
+namespace App\Utils\RR;
 
 use App\Exceptions\RequestException;
 
