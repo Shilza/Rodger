@@ -1,20 +1,3 @@
-html, body {
-    height: 100%;
-    width: 100%;
-}
-
-body {
-    background-color: #efefef;
-}
-
-.login-logo {
-    height:48px;
-    width:48px;
-}
-
-.login-form-header {
-    margin-top: 20%;
-}
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i');
 
 .toast-messages {

@@ -34,7 +34,7 @@ abstract class AuthorizationHelper{
      * @param string $password
      * @param bool $force
      */
-    public function __construct(string $login, string $password, bool $force){
+    public function __construct(string $login, string $password, bool $force = false){
         $this->curl = new CURLHelper();
         $this->login = $login;
         $this->password = $password;

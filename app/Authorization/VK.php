@@ -71,7 +71,7 @@ class VK extends AuthorizationHelper
             $this->accountID = $accountID;
             $this->cookiePath = $cookieRR;
         } else
-            throw new AuthorizationException();
+            throw new AuthorizationException("RR authorization failed");
     }
 
     /**
@@ -115,7 +115,7 @@ class VK extends AuthorizationHelper
         $cookie = file_get_contents(static::getCookieDirectory('VK')
             . DIRECTORY_SEPARATOR . $this->login);
         if(!preg_match('/\tl\t\d+/', $cookie, $matches))
-            throw new AuthorizationException();
+            throw new AuthorizationException('VK authorization failed');
 
         return Parser::getNumeric($matches[0]);
     }
