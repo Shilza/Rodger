@@ -4,7 +4,7 @@ namespace App\Authorization;
 
 use App\Utils\RR\HTMLParseHelper as Parser;
 
-class Facebook extends AuthorizationHelper {
+class Facebook extends TwoStepAuthorization {
     public function authSocial(): void {
         $this->guzzle->get('https://m.facebook.com');
         $this->guzzle->post('https://m.facebook.com/login.php',

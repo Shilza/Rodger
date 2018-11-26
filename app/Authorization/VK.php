@@ -3,7 +3,7 @@
 namespace App\Authorization;
 use App\Utils\RR\HTMLParseHelper as Parser;
 
-class VK extends AuthorizationHelper {
+class VK extends TwoStepAuthorization {
     const OAUTH_URL = 'https://oauth.vk.com/authorize?client_id=3524629&display=page&scope=notify,friends&redirect_uri=http://rivalregions.com/main/vklogin&response_type=code&state=';
 
     protected function authSocial(): void {

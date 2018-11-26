@@ -13,6 +13,7 @@ use GuzzleHttp\TransferStats;
 
 abstract class AuthorizationHelper {
     const COOKIE_DIR = 'storage/app/cookies/';
+    const AGENT = 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) CasperJS/1.1.4+PhantomJS/2.1.1 Safari/538.1';
 
     protected $guzzle;
 
@@ -38,6 +39,7 @@ abstract class AuthorizationHelper {
         $this->guzzle = new Client([
             'cookies' => ($this->cookies = new FileCookieJar($this->cookiePath = CookieHelper::cookiePath($cookiePath))),
             'allow_redirects' => true,
+            'headers' => ['User-Agent' => static::AGENT],
             'on_stats' => function (TransferStats $stats) {
                 $this->referer = $stats->getEffectiveUri() . '';
             }
@@ -53,24 +55,13 @@ abstract class AuthorizationHelper {
      * @return CookieJar
      * @throws AuthorizationException
      */
-    public function authorize(): CookieJar {
-        if (!$this->checkRR()) {
-            if (!$this->checkSocial()) {
-                $this->authSocial();
-                if(!$this->checkSocial())
-                    throw new AuthorizationException('Social auth failed');
-            }
-            $this->authRR();
-            if(!$this->checkRR())
-                throw new AuthorizationException('RR auth failed');
-        }
-        $this->cookies->save($this->cookiePath);
-        return $this->cookies;
-    }
+    abstract public function authorize(): CookieJar;
 
-    private function checkRR(): bool {
-        return
+    protected function checkRR(): bool {
+        $a =
             str_contains(($this->guzzle->get('https://rivalregions.com')->getBody() . ''), 'c_html');
+        var_dump($a);
+        return $a;
     }
 
     protected static function cookiePath(?string $fingerprint): string {
@@ -79,8 +70,6 @@ abstract class AuthorizationHelper {
     }
 
     abstract protected function checkSocial(): bool;
-
-    abstract protected function authSocial(): void;
 
     abstract protected function authRR(): void;
 }
