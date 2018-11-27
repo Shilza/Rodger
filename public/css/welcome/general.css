@@ -1,0 +1,61 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.parallax {
+    height: 100%;
+
+    /*background: url('http://127.0.0.1:8000/main.jpg') no-repeat fixed center;*/
+    background: #f6fdff no-repeat fixed center;
+    background-size: cover;
+}
+
+.splitter {
+    height: 100%;
+
+    background: url('http://127.0.0.1:8000/images/splitter.jpg') no-repeat fixed center;
+    background-size: cover;
+}
+
+.shadow-button {
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.shadow-button:hover {
+    box-shadow: 2px 4px 10px rgba(0,0,0,0.25), 0 1px 10px rgba(0,0,0,0.22);
+}
+
+.capabilities {
+    min-height: 100%;
+    background: white;
+    padding: 0 10% 0 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.pricing {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #606f7b;
+    padding: 0 10% 0 10%;
+}
+
+@media(max-width: 768px) {
+    .capabilities {
+        flex-direction: column;
+        padding: 10% 10% 0 10%;;
+    }
+}
+
+@media(max-width: 425px) {
+    .pricing {
+        overflow-x: scroll;
+        display: block;
+        white-space: nowrap;
+    }
+}

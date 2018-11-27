@@ -9,7 +9,11 @@
 
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.23/css/uikit.min.css"/>
-    <link rel="stylesheet" href="{!! asset('css/app.css') !!}">
+    <link rel="stylesheet" href="{!! asset('css/welcome/general.css') !!}">
+    <link rel="stylesheet" href="{!! asset('css/welcome/login-form.css') !!}">
+    <link rel="stylesheet" href="{!! asset('css/welcome/toast.css') !!}">
+    <link rel="stylesheet" href="{!! asset('css/welcome/card.css') !!}">
+    <link rel="stylesheet" href="{!! asset('css/welcome/pricing-card.css') !!}">
 
 
     <!-- UIkit JS -->
@@ -19,50 +23,97 @@
 </head>
 <body>
 
-@if ( $errors->count() > 0 )
-    @foreach( $errors->all() as $message )
-        @component('toast')
-            {{ $message }}
-        @endcomponent
-    @endforeach
-@endif
+<div class="uk-flex uk-flex-center uk-flex-middle uk-flex-column parallax">
+    <img style="border-radius: 50%; max-height: 200px" src="{!! asset('images/rodger.png') !!}"/>
+    <div style="text-align: center">
+        <h1 style="font-weight: bold">Rodger</h1>
+        <h3>Rival regions support robot</h3>
+    </div>
+    <p style="font-family: 'Source Code Pro', monospace">Description</p>
+    <button class="uk-button uk-button-default shadow-button">Start</button>
+</div>
 
-<div class="uk-flex uk-flex-center uk-flex-middle uk-flex-column" style="height: 100%">
+<div style="background-color: black; height: 10%">
+    <div class="splitter"></div>
+</div>
 
-    <div class="uk-card uk-card-default uk-card-body ">
-        <div class="uk-flex uk-flex-right uk-flex-around">
-            <div class="uk-flex uk-flex-column">
-                <img src="{!! asset('rodger.png') !!}" class="login-logo"
-                     uk-tooltip="title: Hello,I'm Rodger!; pos: right">
-                <h3 class="login-form-header">Login</h3>
-            </div>
-        </div>
-
-        <form>
-            <div class="uk-margin">
-                <div class="uk-inline">
-                    <span class="uk-form-icon" uk-icon="icon: user; ratio: 0.7"></span>
-                    <input class="uk-input uk-form-small" id='login' type="text" placeholder="Login">
-                </div>
-            </div>
-
-            <div class="uk-margin">
-                <div class="uk-inline">
-                    <span class="uk-form-icon" uk-icon="icon: lock; ratio: 0.7"></span>
-                    <input class="uk-input uk-form-small" id='password' type="password"
-                           placeholder="Password">
-                </div>
-            </div>
-        </form>
-        <div class="uk-flex uk-flex-center uk-flex-around">
-            <button class="uk-icon-link uk-margin-small-right" onclick="loginSocial('Fb')" uk-icon="facebook"></button>
-            <button class="uk-icon-link uk-margin-small-right" onclick="loginSocial('G+')"
-                    uk-icon="google-plus"></button>
-            <button class="uk-icon-link uk-margin-small-right" onclick="loginSocial('VK')" uk-icon="vimeo"></button>
-        </div>
-
+<div class="capabilities">
+    <div class="card uk-width-1-5">
+        <h3 class="card-title">Default</h3>
+        <p class="card-description">Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="card uk-width-1-5">
+        <h3 class="card-title">Default</h3>
+        <p class="card-description">Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="card uk-width-1-5">
+        <h3 class="card-title">Default</h3>
+        <p class="card-description">Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </div>
 </div>
+
+<div style="background-color: black; height: 10%">
+    <div class="splitter"></div>
+</div>
+
+<div class="pricing">
+    <div class="white-pricing-card">
+        <img src="{!! asset('images/kite.png') !!}">
+        <span class="pricing-card-title">Noob</span>
+        <span class="pricing-card-description">Description</span>
+        <div class="pricing-card-includes-container">
+            @component('components.pricing-includes')
+                {{ 'Includes' }}
+            @endcomponent
+        </div>
+        <div class="pricing-card-splitter"></div>
+        <div class="pricing-card-price-constainer">
+            <span class="pricing-card-price">10$</span>
+            <span>/ mounth</span>
+        </div>
+        <button class="pricing-card-price-button">Buy</button>
+    </div>
+    <div class="blue-pricing-card">
+        <img src="{!! asset('images/paper-plane.png') !!}">
+        <span class="pricing-card-title">Normal</span>
+        <span class="pricing-card-description">Description</span>
+        <div class="pricing-card-includes-container">
+            @component('components.pricing-includes')
+                {{ 'Includes' }}
+            @endcomponent
+        </div>
+        <div class="pricing-card-splitter"></div>
+        <div class="pricing-card-price-constainer">
+            <span class="pricing-card-price">10$</span>
+            <span>/ mounth</span>
+        </div>
+        <button class="pricing-card-price-button">Buy</button>
+    </div>
+    <div class="deep-blue-pricing-card">
+        <img src="{!! asset('images/rocket.png') !!}">
+        <span class="pricing-card-title" style="color: white">Hero</span>
+        <span class="pricing-card-description">Description Descri ption Descri ption Descrip tion Descrip tion</span>
+        <div class="pricing-card-includes-container">
+            @component('components.pricing-includes')
+                {{ 'Includes' }}
+            @endcomponent
+            @component('components.pricing-includes')
+                {{ 'Includes' }}
+            @endcomponent
+            @component('components.pricing-includes')
+                {{ 'Includes' }}
+            @endcomponent
+        </div>
+        <div class="pricing-card-splitter"></div>
+        <div class="pricing-card-price-constainer">
+            <span class="pricing-card-price">10$</span>
+            <span>/ mounth</span>
+        </div>
+        <button class="pricing-card-price-button">Buy</button>
+    </div>
 </div>
 
 <script src="{!! asset('js/login.js') !!}"></script>

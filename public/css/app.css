@@ -7,6 +7,22 @@ body {
     background-color: #efefef;
 }
 
+.parallax {
+    height: 100%;
+
+    background: url('http://127.0.0.1:8000/main.jpg') no-repeat fixed center;
+    background-size: cover;
+}
+
+.parallax2 {
+    height: 20%;
+
+    transform: translateZ(-200px);
+    background: url('http://127.0.0.1:8000/nyc.jpg') no-repeat fixed center;
+    background-size: cover;
+}
+
+
 .login-logo {
     height:48px;
     width:48px;
