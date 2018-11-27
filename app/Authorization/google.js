@@ -6,17 +6,16 @@ casper.start('http://rivalregions.com/');
 
 casper.thenClick('div.gogo');
 
-casper.thenEvaluate(function(){
-    document.getElementById('Email').setAttribute('value', casper.cli.args[0]);
-    document.getElementById('next').click();
+casper.then(function(){
+    this.sendKeys('#Email', casper.cli.args[0]);
+    this.click('#next');
 });
 
 casper.then(function(){
+    this.echo(this.cli.args[0]);
     this.waitForSelector('#Passwd', function(){
-        this.evaluate(function(){
-            document.getElementById('Passwd').setAttribute('value', casper.cli.args[1]);
-            document.getElementById('next').click();
-        });
+        this.sendKeys('#Passwd', casper.cli.args[1]);
+        this.click('#next');
     });
 });
 
