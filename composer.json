@@ -6,18 +6,23 @@
     "type": "project",
     "require": {
         "php": "^7.1.3",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "facebook/webdriver": "^1.6",
         "fideloper/proxy": "^4.0",
+        "guzzlehttp/guzzle": "^6.3",
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0",
-      "ext-curl": "*"
+        "phpcasperjs/phpcasperjs": "^1.3",
+        "phpunit/phpunit": "6.5.9",
+        "phpunit/phpunit-selenium": "^4.1"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
         "filp/whoops": "^2.0",
         "fzaninotto/faker": "^1.4",
         "mockery/mockery": "^1.0",
-        "nunomaduro/collision": "^2.0",
-        "phpunit/phpunit": "^7.0"
+        "nunomaduro/collision": "^2.0"
     },
     "autoload": {
         "classmap": [
