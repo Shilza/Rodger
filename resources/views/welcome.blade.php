@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{!! asset('css/welcome/toast.css') !!}">
     <link rel="stylesheet" href="{!! asset('css/welcome/card.css') !!}">
     <link rel="stylesheet" href="{!! asset('css/welcome/pricing-card.css') !!}">
-
+    <link rel="stylesheet" href="{!! asset('css/welcome/pricing_button.css') !!}">
 
     <!-- UIkit JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.23/js/uikit.min.js"></script>
@@ -30,7 +30,8 @@
         <h3>Rival regions support robot</h3>
     </div>
     <p style="font-family: 'Source Code Pro', monospace">Description</p>
-    <button class="uk-button uk-button-default shadow-button">Start</button>
+    <a href="{{ url('/login') }}" class="uk-button uk-button-default shadow-button">Start</a>
+
 </div>
 
 <div style="background-color: black; height: 10%">
@@ -74,7 +75,7 @@
             <span class="pricing-card-price">10$</span>
             <span>/ mounth</span>
         </div>
-        <button class="pricing-card-price-button">Buy</button>
+        <button class="pure-button fuller-button blue">Buy</button>
     </div>
     <div class="blue-pricing-card">
         <img src="{!! asset('images/paper-plane.png') !!}">
@@ -90,7 +91,7 @@
             <span class="pricing-card-price">10$</span>
             <span>/ mounth</span>
         </div>
-        <button class="pricing-card-price-button">Buy</button>
+        <button class="pure-button fuller-button white">Buy</button>
     </div>
     <div class="deep-blue-pricing-card">
         <img src="{!! asset('images/rocket.png') !!}">
@@ -112,7 +113,7 @@
             <span class="pricing-card-price">10$</span>
             <span>/ mounth</span>
         </div>
-        <button class="pricing-card-price-button">Buy</button>
+        <button class="pure-button fuller-button white">Buy</button>
     </div>
 </div>
 

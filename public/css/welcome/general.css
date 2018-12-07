@@ -48,14 +48,14 @@ html, body {
 @media(max-width: 768px) {
     .capabilities {
         flex-direction: column;
-        padding: 10% 10% 0 10%;;
+        padding: 10% 10% 0 10%;
     }
 }
 
 @media(max-width: 425px) {
     .pricing {
-        overflow-x: scroll;
-        display: block;
-        white-space: nowrap;
+        height: auto;
+        flex-direction: column;
+        padding-top: 10%;
     }
 }
