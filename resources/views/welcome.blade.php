@@ -170,8 +170,6 @@
     </div>
 </div>
 
-<script src="{!! asset('js/login.js') !!}"></script>
-<script src="{!! asset('js/toast.js') !!}"></script>
 <script type="text/javascript">
     $.ajaxSetup({
         headers: {

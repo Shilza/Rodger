@@ -71,5 +71,15 @@
     </div>
 </div>
 
+
+<script src="{!! asset('js/login.js') !!}"></script>
+<script src="{!! asset('js/toast.js') !!}"></script>
+<script type="text/javascript">
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+</script>
 </body>
 </html>
