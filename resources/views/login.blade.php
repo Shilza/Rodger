@@ -32,7 +32,7 @@
     @endforeach
 @endif
 
-<div class="uk-flex uk-flex-center uk-flex-middle uk-flex-column" style="height: 100%">
+<div class="uk-flex uk-flex-center uk-flex-middle uk-flex-column" style="height: 100%; background: #454545">
 
     <div class="uk-card uk-card-default uk-card-body">
         <div class="uk-flex uk-flex-right uk-flex-around">

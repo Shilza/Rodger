@@ -11,6 +11,11 @@ use Illuminate\Support\Facades\Validator;
 
 class AuthController extends Controller
 {
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     * @throws \Throwable
+     */
     public function login(Request $request){
         $validator = Validator::make($request->all(), [
             'login' => 'required|string|min:6|max:255',
@@ -19,10 +24,6 @@ class AuthController extends Controller
         ]);
 
         if ($validator->fails()){
-//            return back()
-//                ->withErrors($validator)
-//                ->withInput();
-
             $returnHTML = view('welcome')->withErrors($validator)->render();
             return response()->json(['html' => $returnHTML], 200);
         }
