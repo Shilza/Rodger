@@ -1,0 +1,53 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.welcome-rodger-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100%;
+    background: #f6fdff no-repeat fixed center;
+}
+
+.main-rodger-img {
+    border-radius: 50%;
+    max-height: 200px;
+}
+
+@media (max-width: 1024px) {
+    .welcome-rodger-container {
+        padding: 5% 0 5% 0;
+    }
+}
+
+.main-start-button {
+    color: black;
+    background: none;
+    text-align: center;
+    border-radius: 0;
+    padding: 10px 30px 10px 30px;
+    letter-spacing: 0.35em;
+    font-size: 0.7em;
+    transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+    margin: 1em;
+    cursor: pointer;
+    box-shadow: inset 0 0 0.5em rgba(0, 170, 170, 0.5), 0 0 1em rgba(0, 170, 170, 0.5);
+    border: #bdf1ec solid 1px;
+}
+
+.main-start-button:hover {
+    box-shadow: inset 0 0 0.5em rgba(0, 170, 170, 0.5), 0 0 1em rgba(0, 170, 170, 0.5);
+    background: #e8fefc;
+}
+
+.shadow-button {
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.shadow-button:hover {
+    box-shadow: 2px 4px 10px rgba(0,0,0,0.25), 0 1px 10px rgba(0,0,0,0.22);
+}
+

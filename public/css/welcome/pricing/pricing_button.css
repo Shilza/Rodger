@@ -1,0 +1,52 @@
+
+.fuller-button {
+    color: white;
+    background: none;
+    width: 75%;
+    text-align: center;
+    border-radius: 0;
+    padding: 6%;
+    letter-spacing: 0.35em;
+    font-size: 0.7em;
+    transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+    margin: 1em;
+    cursor: pointer;
+}
+
+.fuller-button.blue {
+    color: black;
+    box-shadow: inset 0 0 0.5em rgba(0, 170, 170, 0.5), 0 0 1em rgba(0, 170, 170, 0.5);
+    border: #bdf1ec solid 2px;
+}
+
+.fuller-button.black {
+    box-shadow: inset 0 0 0.8em rgba(255, 255, 255, 0.3), 0 0 0.8em rgba(255, 255, 255, 0.3);
+    border: #fff solid 2px;
+}
+
+.fuller-button.black:hover {
+    box-shadow: inset 0 0 0.5em rgba(0, 170, 170, 0.5), 0 0 1em rgba(0, 170, 170, 0.5);
+    border: #bdf1ec solid 2px;
+}
+
+.fuller-button.blue:hover {
+    background-color: #e9fffd;
+    box-shadow: inset 0 0 0 rgba(0, 170, 170, 0.5), 0 0 1.5em rgba(0, 170, 170, 0.7);
+}
+.fuller-button.red {
+    box-shadow: inset 0 0 1em rgba(251, 81, 81, 0.4), 0 0 1em rgba(251, 81, 81, 0.4);
+    border: #fb5454 solid 2px;
+}
+.fuller-button.red:hover {
+    background-color: #fb5454;
+    box-shadow: inset 0 0 0 rgba(251, 81, 81, 0.4), 0 0 1.5em rgba(251, 81, 81, 0.6);
+}
+.fuller-button.white {
+    box-shadow: inset 0 0 0.8em rgba(255, 255, 255, 0.3), 0 0 0.8em rgba(255, 255, 255, 0.3);
+    border: #fff solid 2px;
+}
+
+.fuller-button.white:hover {
+    background-color: #a1eae3;
+    box-shadow: inset 0 0 0 rgba(255, 255, 255, 0.3), 0 0 1.2em rgba(255, 255, 255, 0.5);
+}
