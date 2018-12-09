@@ -42,22 +42,22 @@
     </div>
     <div class="capabilities">
         <div class="capabilities-card">
-            <img src="https://camouf.ru/upload/iblock/198/maket1_min.jpg" class="capabilities-card-img"/>
+            <img src="{!! asset('images/rodger.png') !!}" class="capabilities-card-img"/>
             <p style="font-weight: bold; font-size: 1.3em;">Header</p>
             <span>Description</span>
         </div>
         <div class="capabilities-card">
-            <img src="https://camouf.ru/upload/iblock/198/maket1_min.jpg" class="capabilities-card-img"/>
+            <img src="{!! asset('images/rodger.png') !!}" class="capabilities-card-img"/>
             <p style="font-weight: bold; font-size: 1.3em;">Header</p>
             <span>Description</span>
         </div>
         <div class="capabilities-card">
-            <img src="https://camouf.ru/upload/iblock/198/maket1_min.jpg" class="capabilities-card-img"/>
+            <img src="{!! asset('images/rodger.png') !!}" class="capabilities-card-img"/>
             <p style="font-weight: bold; font-size: 1.3em;">Header</p>
             <span>Description</span>
         </div>
         <div class="capabilities-card">
-            <img src="https://camouf.ru/upload/iblock/198/maket1_min.jpg" class="capabilities-card-img"/>
+            <img src="{!! asset('images/rodger.png') !!}" class="capabilities-card-img"/>
             <p style="font-weight: bold; font-size: 1.3em;">Header</p>
             <span>Description</span>
         </div>
