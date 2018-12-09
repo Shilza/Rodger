@@ -36,6 +36,7 @@ html, body {
     cursor: pointer;
     box-shadow: inset 0 0 0.5em rgba(0, 170, 170, 0.5), 0 0 1em rgba(0, 170, 170, 0.5);
     border: #bdf1ec solid 1px;
+    text-decoration: none;
 }
 
 .main-start-button:hover {

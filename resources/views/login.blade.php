@@ -19,7 +19,7 @@
 
     <!-- UIkit JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.23/js/uikit.min.js"></script>
-    <script src="uikit/dist/js/uikit-icons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.23/js/uikit-icons.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
@@ -32,7 +32,7 @@
     @endforeach
 @endif
 
-<div class="uk-flex uk-flex-center uk-flex-middle uk-flex-column parallax">
+<div class="uk-flex uk-flex-center uk-flex-middle uk-flex-column" style="height: 100%; background: #454545">
 
     <div class="uk-card uk-card-default uk-card-body">
         <div class="uk-flex uk-flex-right uk-flex-around">
@@ -65,11 +65,21 @@
             <li>
                 <a class="facebook fa fa-facebook" onclick="loginSocial('Fb')"></a>
                 <a class="google-plus fa fa-google-plus" onclick="loginSocial('G+')"></a>
-                <a class="twitter fa fa-vk" onclick="loginSocial('VK')"></a>
+                <a class="vk fa fa-vk" onclick="loginSocial('VK')"></a>
             </li>
         </ul>
     </div>
 </div>
 
+
+<script src="{!! asset('js/login.js') !!}"></script>
+<script src="{!! asset('js/toast.js') !!}"></script>
+<script type="text/javascript">
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+</script>
 </body>
 </html>

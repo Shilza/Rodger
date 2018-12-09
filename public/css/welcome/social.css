@@ -18,7 +18,7 @@
     line-height: 32px;
     background: #000;
     position: relative;
-    transition: 0.5s;
+    transition: 0.4s;
 }
 .model-2 a {
     overflow: hidden;
@@ -28,25 +28,25 @@
 }
 .model-2 a:hover {
     background: #fff;
-    text-shadow: 0px 0px #d5d5d5, 1px 1px #d5d5d5, 2px 2px #d5d5d5, 3px 3px #d5d5d5, 4px 4px #d5d5d5, 5px 5px #d5d5d5, 6px 6px #d5d5d5, 7px 7px #d5d5d5, 8px 8px #d5d5d5, 9px 9px #d5d5d5, 10px 10px #d5d5d5, 11px 11px #d5d5d5, 12px 12px #d5d5d5, 13px 13px #d5d5d5, 14px 14px #d5d5d5, 15px 15px #d5d5d5, 16px 16px #d5d5d5, 17px 17px #d5d5d5, 18px 18px #d5d5d5, 19px 19px #d5d5d5, 20px 20px #d5d5d5, 21px 21px #d5d5d5, 22px 22px #d5d5d5, 23px 23px #d5d5d5, 24px 24px #d5d5d5, 25px 25px #d5d5d5, 26px 26px #d5d5d5, 27px 27px #d5d5d5, 28px  28px #d5d5d5, 29px 29px #d5d5d5, 30px 30px #d5d5d5;
+    text-shadow: 0 0 #d5d5d5, 1px 1px #d5d5d5, 2px 2px #d5d5d5, 3px 3px #d5d5d5, 4px 4px #d5d5d5, 5px 5px #d5d5d5, 6px 6px #d5d5d5, 7px 7px #d5d5d5, 8px 8px #d5d5d5, 9px 9px #d5d5d5, 10px 10px #d5d5d5, 11px 11px #d5d5d5, 12px 12px #d5d5d5, 13px 13px #d5d5d5, 14px 14px #d5d5d5, 15px 15px #d5d5d5, 16px 16px #d5d5d5, 17px 17px #d5d5d5, 18px 18px #d5d5d5, 19px 19px #d5d5d5, 20px 20px #d5d5d5, 21px 21px #d5d5d5, 22px 22px #d5d5d5, 23px 23px #d5d5d5, 24px 24px #d5d5d5, 25px 25px #d5d5d5, 26px 26px #d5d5d5, 27px 27px #d5d5d5, 28px  28px #d5d5d5, 29px 29px #d5d5d5, 30px 30px #d5d5d5;
 }
-.model-2 .twitter {
-    background: #00aced;
-    text-shadow: 0px 0px #0087ba, 1px 1px #0087ba, 2px 2px #0087ba, 3px 3px #0087ba, 4px 4px #0087ba, 5px 5px #0087ba, 6px 6px #0087ba, 7px 7px #0087ba, 8px 8px #0087ba, 9px 9px #0087ba, 10px 10px #0087ba, 11px 11px #0087ba, 12px 12px #0087ba, 13px 13px #0087ba, 14px 14px #0087ba, 15px 15px #0087ba, 16px 16px #0087ba, 17px 17px #0087ba, 18px 18px #0087ba, 19px 19px #0087ba, 20px 20px #0087ba, 21px 21px #0087ba, 22px 22px #0087ba, 23px 23px #0087ba, 24px 24px #0087ba, 25px 25px #0087ba, 26px 26px #0087ba, 27px 27px #0087ba, 28px 28px #0087ba, 29px 29px #0087ba, 30px 30px #0087ba;
+.model-2 .vk {
+    background: #4a76a8;
+    text-shadow: 0 0 #2b4c72, 1px 1px #2b4c72, 2px 2px #2b4c72, 3px 3px #2b4c72, 4px 4px #2b4c72, 5px 5px #2b4c72, 6px 6px #2b4c72, 7px 7px #2b4c72, 8px 8px #2b4c72, 9px 9px #2b4c72, 10px 10px #2b4c72, 11px 11px #2b4c72, 12px 12px #2b4c72, 13px 13px #2b4c72, 14px 14px #2b4c72, 15px 15px #2b4c72, 16px 16px #2b4c72, 17px 17px #2b4c72, 18px 18px #2b4c72, 19px 19px #2b4c72, 20px 20px #2b4c72, 21px 21px #2b4c72, 22px 22px #2b4c72, 23px 23px #2b4c72, 24px 24px #2b4c72, 25px 25px #2b4c72, 26px 26px #2b4c72, 27px 27px #2b4c72, 28px 28px #2b4c72, 29px 29px #2b4c72, 30px 30px #2b4c72;
 }
-.model-2 .twitter:hover {
-    color: #00aced;
+.model-2 .vk:hover {
+    color: #4a76a8;
 }
 .model-2 .facebook {
     background: #3b579d;
-    text-shadow: 0px 0px #2d4278, 1px 1px #2d4278, 2px 2px #2d4278, 3px 3px #2d4278, 4px 4px #2d4278, 5px 5px #2d4278, 6px 6px #2d4278, 7px 7px #2d4278, 8px 8px #2d4278, 9px 9px #2d4278, 10px 10px #2d4278, 11px 11px #2d4278, 12px 12px #2d4278, 13px 13px #2d4278, 14px 14px #2d4278, 15px 15px #2d4278, 16px 16px #2d4278, 17px 17px #2d4278, 18px 18px #2d4278, 19px 19px #2d4278, 20px 20px #2d4278, 21px 21px #2d4278, 22px 22px #2d4278, 23px 23px #2d4278, 24px 24px #2d4278, 25px 25px #2d4278, 26px 26px #2d4278, 27px 27px #2d4278, 28px 28px #2d4278, 29px 29px #2d4278, 30px 30px #2d4278;
+    text-shadow: 0 0 #2d4278, 1px 1px #2d4278, 2px 2px #2d4278, 3px 3px #2d4278, 4px 4px #2d4278, 5px 5px #2d4278, 6px 6px #2d4278, 7px 7px #2d4278, 8px 8px #2d4278, 9px 9px #2d4278, 10px 10px #2d4278, 11px 11px #2d4278, 12px 12px #2d4278, 13px 13px #2d4278, 14px 14px #2d4278, 15px 15px #2d4278, 16px 16px #2d4278, 17px 17px #2d4278, 18px 18px #2d4278, 19px 19px #2d4278, 20px 20px #2d4278, 21px 21px #2d4278, 22px 22px #2d4278, 23px 23px #2d4278, 24px 24px #2d4278, 25px 25px #2d4278, 26px 26px #2d4278, 27px 27px #2d4278, 28px 28px #2d4278, 29px 29px #2d4278, 30px 30px #2d4278;
 }
 .model-2 .facebook:hover {
     color: #3b579d;
 }
 .model-2 .google-plus {
     background: #dd4a3a;
-    text-shadow: 0px 0px #c23122, 1px 1px #c231222px 2px #c231223px 3px #c231224px 4px #c231225px 5px #c231226px 6px #c231227px 7px #c231228px 8px #c231229px 9px #c2312210px 10px #c2312211px 11px #c2312212px 12px #c2312213px 13px #c2312214px 14px #c2312215px 15px #c2312216px 16px #c2312217px 17px #c2312218px 18px #c2312219px 19px #c2312220px 20px #c2312221px 21px #c2312222px 22px #c2312223px 23px #c2312224px 24px #c2312225px 25px #c2312226px 26px #c2312227px 27px #c2312228px 28px #c2312229px 29px #c2312230px 30px #c23122;
+    text-shadow: 0 0 #c23122, 1px 1px #c23122, 2px 2px #c23122, 3px 3px #c23122, 4px 4px #c23122, 5px 5px #c23122, 6px 6px #c23122, 7px 7px #c23122, 8px 8px #c23122, 9px 9px #c23122, 10px 10px #c23122, 11px 11px #c23122, 12px 12px #c23122, 13px 13px #c23122, 14px 14px #c23122, 15px 15px #c23122, 16px 16px #c23122, 17px 17px #c23122, 18px 18px #c23122, 19px 19px #c23122, 20px 20px #c23122, 21px 21px #c23122, 22px 22px #c23122, 23px 23px #c23122, 24px 24px #c23122, 25px 25px #c23122, 26px 26px #c23122, 27px 27px #c23122, 28px 28px #c23122, 29px 29px #c23122, 30px 30px #c23122;
 }
 .model-2 .google-plus:hover {
     color: #dd4a3a;
