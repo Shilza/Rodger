@@ -1,0 +1,534 @@
+
+.card {
+    font-family: 'Source Code Pro';
+    background-color: #403F3F;
+    color: white;
+    padding: 3%;
+    border-radius: 1%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+        margin-bottom: 10%;
+    }
+}
+
+.card:hover {
+    box-shadow: 2px 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.card-title {
+    text-align: center;
+    color: white;
+}
+
+.card-description {
+    text-align: center;
+}
+
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.welcome-rodger-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100%;
+    background: #f6fdff no-repeat fixed center;
+}
+
+.main-rodger-img {
+    border-radius: 50%;
+    max-height: 200px;
+}
+
+@media (max-width: 1024px) {
+    .welcome-rodger-container {
+        padding: 5% 0 5% 0;
+    }
+}
+
+.main-start-button {
+    color: black;
+    background: none;
+    text-align: center;
+    border-radius: 0;
+    padding: 10px 30px 10px 30px;
+    letter-spacing: 0.35em;
+    font-size: 0.7em;
+    transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+    margin: 1em;
+    cursor: pointer;
+    box-shadow: inset 0 0 0.5em rgba(0, 170, 170, 0.5), 0 0 1em rgba(0, 170, 170, 0.5);
+    border: #bdf1ec solid 1px;
+    text-decoration: none;
+}
+
+.main-start-button:hover {
+    box-shadow: inset 0 0 0.5em rgba(0, 170, 170, 0.5), 0 0 1em rgba(0, 170, 170, 0.5);
+    background: #e8fefc;
+}
+
+.shadow-button {
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.shadow-button:hover {
+    box-shadow: 2px 4px 10px rgba(0,0,0,0.25), 0 1px 10px rgba(0,0,0,0.22);
+}
+
+
+
+.support-info {
+    min-height: 30%;
+    height: auto;
+    background: darkslategrey;
+    display: flex;
+}
+
+@media (max-width: 425px) {
+    .support-info {
+        flex-direction: column;
+    }
+}
+
+.support-info-card-wrapper {
+    padding: 5% 0 7% 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+
+.support-info-card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .support-info-card-wrapper {
+        padding: 1% 2% 2% 2%;
+    }
+}
+
+.info-gray {
+    background: #515050;
+}
+
+.info-red {
+    background: #f35d65;
+}
+
+.info-green {
+    background: #64d5ae;
+}
+
+.support-info-card-title {
+    color: white;
+    font-weight: bold;
+}
+
+.support-info-description {
+    color: white;
+    font-size: 1.3em;
+    max-width: 60%;
+}
+.capabilities-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100%;
+    height: auto;
+}
+
+.capabilities-container-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3% 0 5% 0;
+}
+
+.capabilities-title {
+    font-weight: bold;
+    font-size: 2em;
+    color: black;
+    position: relative;
+    z-index : 1;
+    padding-bottom: 8px;
+}
+
+.capabilities-title:before {
+    content : "";
+    position: absolute;
+    left    : 20%;
+    bottom  : 0;
+    height  : 1px;
+    width   : 60%;
+    border-bottom: 3px solid sandybrown;
+}
+
+.capabilities-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10%;
+}
+
+.capabilities {
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 3% 0 5% 0;
+}
+
+@media(max-width: 425px) {
+    .capabilities {
+        flex-direction: column;
+        padding: 5% 0 10% 0;
+
+    }
+}
+
+.capabilities-card-img {
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 8%;
+    width: 64px;
+    height: 64px;
+}
+
+.white-pricing-card,
+.blue-pricing-card,
+.deep-blue-pricing-card {
+    font-family: 'Source Code Pro';
+    color: white;
+    padding: 3%;
+    border-radius: 1%;
+    width: 20%;
+    max-width: 250px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 2px 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.white-pricing-card {
+    background: white;
+    color: black;
+}
+
+.blue-pricing-card {
+    background: #64d5ca;
+    margin: 0 3% 0 3%;
+}
+
+.deep-blue-pricing-card {
+    background: #3f4257;
+}
+
+.pricing-card-title {
+    margin-top: 10%;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.pricing-card-splitter {
+    border-top: 1px solid lightgrey;
+    opacity: 0.4;
+    width: 100%;
+}
+
+.pricing-card-price {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.pricing-card-price-container {
+    margin: 10% 0 10% 0;
+}
+
+.pricing-card-description{
+    font-size: 0.5em;
+    opacity: 0.8;
+    margin-top: 0;
+}
+
+.pricing-card-includes-container {
+    margin: 10% 0 10% 0;
+    font-size: 0.8em;
+    align-self: start;
+}
+
+@media(max-width: 425px) {
+    .white-pricing-card,
+    .blue-pricing-card,
+    .deep-blue-pricing-card {
+        width: 70%;
+        margin-bottom: 20%;
+    }
+
+    .pricing-card-includes-container {
+        font-size: 1em;
+    }
+}
+
+@media(min-width: 1024px) {
+    .white-pricing-card,
+    .blue-pricing-card,
+    .deep-blue-pricing-card {
+        width: 15%;
+    }
+}
+
+@media(min-width: 2560px) {
+    .white-pricing-card,
+    .blue-pricing-card,
+    .deep-blue-pricing-card {
+        width: 7%;
+    }
+}
+
+.checkmark {
+    display:inline-block;
+    width: 22px;
+    height:22px;
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+}
+
+.checkmark_stem {
+    position: absolute;
+    width:3px;
+    height:9px;
+    background-color:#ccc;
+    left:11px;
+    top:6px;
+}
+
+.checkmark_kick {
+    position: absolute;
+    width:3px;
+    height:3px;
+    background-color:#ccc;
+    left:8px;
+    top:12px;
+}
+
+
+
+
+
+
+
+.pricing-container {
+    height: auto;
+    min-height: 100%;
+    background: #33363d;
+}
+
+.pricing-container-title {
+    margin-bottom: 2%;
+    padding-top: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pricing-title {
+    font-weight: bold;
+    font-size: 2em;
+    color: white;
+    position: relative;
+    z-index : 1;
+    padding-bottom: 8px;
+}
+
+.pricing-title:before {
+    content : "";
+    position: absolute;
+    left    : 20%;
+    bottom  : 0;
+    height  : 1px;
+    width   : 60%;
+    border-bottom: 3px solid sandybrown;
+}
+
+.pricing {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10% 5% 10%;
+}
+
+
+@media(max-width: 425px) {
+    .pricing {
+        flex-direction: column;
+        padding-top: 10%;
+    }
+}
+
+@media (min-width: 2560px) {
+    .pricing-title {
+        font-size: 3em;
+    }
+}
+
+.fuller-button {
+    color: white;
+    background: none;
+    width: 75%;
+    text-align: center;
+    border-radius: 0;
+    padding: 6%;
+    letter-spacing: 0.35em;
+    font-size: 0.7em;
+    transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+    margin: 1em;
+    cursor: pointer;
+}
+
+.fuller-button.blue {
+    color: black;
+    box-shadow: inset 0 0 0.5em rgba(0, 170, 170, 0.5), 0 0 1em rgba(0, 170, 170, 0.5);
+    border: #bdf1ec solid 2px;
+}
+
+.fuller-button.black {
+    box-shadow: inset 0 0 0.8em rgba(255, 255, 255, 0.3), 0 0 0.8em rgba(255, 255, 255, 0.3);
+    border: #fff solid 2px;
+}
+
+.fuller-button.black:hover {
+    box-shadow: inset 0 0 0.5em rgba(0, 170, 170, 0.5), 0 0 1em rgba(0, 170, 170, 0.5);
+    border: #bdf1ec solid 2px;
+}
+
+.fuller-button.blue:hover {
+    background-color: #e9fffd;
+    box-shadow: inset 0 0 0 rgba(0, 170, 170, 0.5), 0 0 1.5em rgba(0, 170, 170, 0.7);
+}
+.fuller-button.red {
+    box-shadow: inset 0 0 1em rgba(251, 81, 81, 0.4), 0 0 1em rgba(251, 81, 81, 0.4);
+    border: #fb5454 solid 2px;
+}
+.fuller-button.red:hover {
+    background-color: #fb5454;
+    box-shadow: inset 0 0 0 rgba(251, 81, 81, 0.4), 0 0 1.5em rgba(251, 81, 81, 0.6);
+}
+.fuller-button.white {
+    box-shadow: inset 0 0 0.8em rgba(255, 255, 255, 0.3), 0 0 0.8em rgba(255, 255, 255, 0.3);
+    border: #fff solid 2px;
+}
+
+.fuller-button.white:hover {
+    background-color: #a1eae3;
+    box-shadow: inset 0 0 0 rgba(255, 255, 255, 0.3), 0 0 1.2em rgba(255, 255, 255, 0.5);
+}
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i');
+
+.toast-messages {
+    display: flex;
+    justify-content: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+.toast__cell{
+    display:inline-block;
+}
+
+.add-margin{
+    margin-top:20px;
+}
+
+.toast__svg{
+    fill:#fff;
+}
+
+.toast {
+    text-align:left;
+    padding: 21px 0;
+    background-color:#fff;
+    border-radius:4px;
+    max-width: 500px;
+    top: 0;
+    position:relative;
+    box-shadow: 1px 7px 14px -5px rgba(0,0,0,0.2);
+}
+
+.toast:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    border-top-left-radius:4px;
+    border-bottom-left-radius: 4px;
+}
+
+.toast__icon{
+    position:absolute;
+    top:50%;
+    left:22px;
+    transform:translateY(-50%);
+    width:14px;
+    height:14px;
+    padding: 7px;
+    border-radius:50%;
+    display:inline-block;
+}
+
+.toast__type {
+    color: #3e3e3e;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.toast__message {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #878787;
+}
+
+.toast__content{
+    padding-left:70px;
+    padding-right:60px;
+}
+
+.toast__close {
+    position: absolute;
+    right: 22px;
+    top: 50%;
+    width: 14px;
+    cursor:pointer;
+    height: 14px;
+    fill:#878787;
+    transform: translateY(-50%);
+}
+
+.toast--yellow .toast__icon{
+    background-color: #FF1414;
+}
+
+.toast--yellow:before{
+    background-color: #FF1414;
+}

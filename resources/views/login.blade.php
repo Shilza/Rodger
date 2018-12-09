@@ -9,10 +9,7 @@
 
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.23/css/uikit.min.css"/>
-    <link rel="stylesheet" href="{!! asset('css/welcome/general.css') !!}">
-    <link rel="stylesheet" href="{!! asset('css/welcome/login-form.css') !!}">
-    <link rel="stylesheet" href="{!! asset('css/welcome/toast.css') !!}">
-    <link rel="stylesheet" href="{!! asset('css/welcome/social.css') !!}">
+    <link rel="stylesheet" href="{!! asset('css/login.css') !!}">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">

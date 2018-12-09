@@ -9,15 +9,7 @@
 
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.23/css/uikit.min.css"/>
-    <link rel="stylesheet" href="{!! asset('css/welcome/general.css') !!}">
-    <link rel="stylesheet" href="{!! asset('css/welcome/login-form.css') !!}">
-    <link rel="stylesheet" href="{!! asset('css/welcome/toast.css') !!}">
-    <link rel="stylesheet" href="{!! asset('css/welcome/card.css') !!}">
-    <link rel="stylesheet" href="{!! asset('css/welcome/pricing/pricing-card.css') !!}">
-    <link rel="stylesheet" href="{!! asset('css/welcome/pricing/pricing_button.css') !!}">
-    <link rel="stylesheet" href="{!! asset('css/welcome/pricing/pricing.css') !!}">
-    <link rel="stylesheet" href="{!! asset('css/welcome/capabilities/capabilities.css') !!}">
-    <link rel="stylesheet" href="{!! asset('css/welcome/support-info.css') !!}">
+    <link rel="stylesheet" href="{!! asset('css//welcome.css') !!}">
 
     <!-- UIkit JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.23/js/uikit.min.js"></script>
