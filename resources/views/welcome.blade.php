@@ -33,7 +33,7 @@
         <h3>Rival regions support robot</h3>
     </div>
     <p style="font-family: 'Source Code Pro', monospace">Description</p>
-    <a href="{{ url('/login') }}" class="uk-button uk-button-default shadow-button">Start</a>
+    <a href="{{ url('/login') }}" class="main-start-button">START</a>
 </div>
 
 <div class="capabilities-container">
@@ -123,11 +123,11 @@
                 @endcomponent
             </div>
             <div class="pricing-card-splitter"></div>
-            <div class="pricing-card-price-constainer">
+            <div class="pricing-card-price-container">
                 <span class="pricing-card-price">10$</span>
                 <span>/ mounth</span>
             </div>
-            <button class="pure-button fuller-button blue">Buy</button>
+            <button class="fuller-button blue">Buy</button>
         </div>
         <div class="blue-pricing-card">
             <img src="{!! asset('images/paper-plane.png') !!}">
@@ -139,11 +139,11 @@
                 @endcomponent
             </div>
             <div class="pricing-card-splitter"></div>
-            <div class="pricing-card-price-constainer">
+            <div class="pricing-card-price-container">
                 <span class="pricing-card-price">10$</span>
                 <span>/ mounth</span>
             </div>
-            <button class="pure-button fuller-button white">Buy</button>
+            <button class="fuller-button white">Buy</button>
         </div>
         <div class="deep-blue-pricing-card">
             <img src="{!! asset('images/rocket.png') !!}">
@@ -161,11 +161,11 @@
                 @endcomponent
             </div>
             <div class="pricing-card-splitter"></div>
-            <div class="pricing-card-price-constainer">
+            <div class="pricing-card-price-container">
                 <span class="pricing-card-price">10$</span>
                 <span>/ mounth</span>
             </div>
-            <button class="pure-button fuller-button black">Buy</button>
+            <button class="fuller-button black">Buy</button>
         </div>
     </div>
 </div>
