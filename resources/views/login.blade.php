@@ -32,7 +32,7 @@
     @endforeach
 @endif
 
-<div class="uk-flex uk-flex-center uk-flex-middle uk-flex-column parallax">
+<div class="uk-flex uk-flex-center uk-flex-middle uk-flex-column" style="height: 100%">
 
     <div class="uk-card uk-card-default uk-card-body">
         <div class="uk-flex uk-flex-right uk-flex-around">
@@ -65,7 +65,7 @@
             <li>
                 <a class="facebook fa fa-facebook" onclick="loginSocial('Fb')"></a>
                 <a class="google-plus fa fa-google-plus" onclick="loginSocial('G+')"></a>
-                <a class="twitter fa fa-vk" onclick="loginSocial('VK')"></a>
+                <a class="vk fa fa-vk" onclick="loginSocial('VK')"></a>
             </li>
         </ul>
     </div>
