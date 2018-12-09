@@ -19,6 +19,7 @@
 
     <!-- UIkit JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.23/js/uikit.min.js"></script>
+    <script src="uikit/dist/js/uikit-icons.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
@@ -36,8 +37,10 @@
     <div class="uk-card uk-card-default uk-card-body">
         <div class="uk-flex uk-flex-right uk-flex-around">
             <div class="uk-flex uk-flex-column">
-                <img src="{!! asset('images/rodger.png') !!}" class="login-logo"
-                     uk-tooltip="title: Hello,I'm Rodger!; pos: right">
+                <a href="{{ url('/') }}">
+                    <img src="{!! asset('images/rodger.png') !!}" class="login-logo"
+                         uk-tooltip="title: Hello,I'm Rodger!; pos: right">
+                </a>
                 <h3 class="login-form-header">Login</h3>
             </div>
         </div>
