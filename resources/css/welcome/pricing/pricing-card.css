@@ -63,7 +63,7 @@
     align-self: start;
 }
 
-@media(max-width: 425px) {
+@media(max-width: 320px) {
     .white-pricing-card,
     .blue-pricing-card,
     .deep-blue-pricing-card {
@@ -71,9 +71,15 @@
         margin-bottom: 20%;
         padding: 10% 3% 10% 3%;
     }
+}
 
-    .pricing-card-includes-container {
-        font-size: 1em;
+@media(min-width: 425px) {
+    .white-pricing-card,
+    .blue-pricing-card,
+    .deep-blue-pricing-card {
+        width: 60%;
+        margin-bottom: 20%;
+        padding: 10% 3% 10% 3%;
     }
 }
 
