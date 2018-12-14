@@ -87,7 +87,6 @@ html, body {
 
 
 .support-info {
-    min-height: 30%;
     height: auto;
     background: darkslategrey;
     display: flex;
@@ -210,6 +209,59 @@ html, body {
     height: 64px;
 }
 
+.fuller-button {
+    color: white;
+    background: none;
+    width: 75%;
+    max-height: 40px;
+    text-align: center;
+    border-radius: 0;
+    padding: 6%;
+    letter-spacing: 0.35em;
+    font-size: 0.7em;
+    transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+    margin: 1em;
+    cursor: pointer;
+}
+
+.fuller-button.blue {
+    color: black;
+    box-shadow: inset 0 0 0.5em rgba(0, 170, 170, 0.5), 0 0 1em rgba(0, 170, 170, 0.5);
+    border: #bdf1ec solid 2px;
+}
+
+.fuller-button.black {
+    box-shadow: inset 0 0 0.8em rgba(255, 255, 255, 0.3), 0 0 0.8em rgba(255, 255, 255, 0.3);
+    border: #fff solid 2px;
+}
+
+.fuller-button.black:hover {
+    box-shadow: inset 0 0 0.5em rgba(0, 170, 170, 0.5), 0 0 1em rgba(0, 170, 170, 0.5);
+    border: #bdf1ec solid 2px;
+}
+
+.fuller-button.blue:hover {
+    background-color: #e9fffd;
+    box-shadow: inset 0 0 0 rgba(0, 170, 170, 0.5), 0 0 1.5em rgba(0, 170, 170, 0.7);
+}
+.fuller-button.red {
+    box-shadow: inset 0 0 1em rgba(251, 81, 81, 0.4), 0 0 1em rgba(251, 81, 81, 0.4);
+    border: #fb5454 solid 2px;
+}
+.fuller-button.red:hover {
+    background-color: #fb5454;
+    box-shadow: inset 0 0 0 rgba(251, 81, 81, 0.4), 0 0 1.5em rgba(251, 81, 81, 0.6);
+}
+.fuller-button.white {
+    box-shadow: inset 0 0 0.8em rgba(255, 255, 255, 0.3), 0 0 0.8em rgba(255, 255, 255, 0.3);
+    border: #fff solid 2px;
+}
+
+.fuller-button.white:hover {
+    background-color: #a1eae3;
+    box-shadow: inset 0 0 0 rgba(255, 255, 255, 0.3), 0 0 1.2em rgba(255, 255, 255, 0.5);
+}
+
 .white-pricing-card,
 .blue-pricing-card,
 .deep-blue-pricing-card {
@@ -217,6 +269,7 @@ html, body {
     color: white;
     padding: 3%;
     border-radius: 1%;
+    min-width: 91px;
     width: 20%;
     max-width: 250px;
     display: flex;
@@ -273,16 +326,25 @@ html, body {
     align-self: start;
 }
 
-@media(max-width: 425px) {
+@media(max-width: 320px) {
     .white-pricing-card,
     .blue-pricing-card,
     .deep-blue-pricing-card {
         width: 70%;
         margin-bottom: 20%;
+        padding: 10% 3% 10% 3%;
     }
+}
 
-    .pricing-card-includes-container {
-        font-size: 1em;
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 768px) {
+    .white-pricing-card,
+    .blue-pricing-card,
+    .deep-blue-pricing-card {
+        width: 60%;
+        margin-bottom: 20%;
+        padding: 10% 3% 10% 3%;
     }
 }
 
@@ -389,57 +451,37 @@ html, body {
         font-size: 3em;
     }
 }
-
-.fuller-button {
-    color: white;
-    background: none;
-    width: 75%;
-    text-align: center;
-    border-radius: 0;
-    padding: 6%;
-    letter-spacing: 0.35em;
-    font-size: 0.7em;
-    transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
-    margin: 1em;
-    cursor: pointer;
+.modal-pricing {
+    display: flex;
+    justify-content: space-around;
 }
 
-.fuller-button.blue {
-    color: black;
-    box-shadow: inset 0 0 0.5em rgba(0, 170, 170, 0.5), 0 0 1em rgba(0, 170, 170, 0.5);
-    border: #bdf1ec solid 2px;
+.modal-pricing-form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2% 0 2%;
+    min-width: 50%;
+    justify-content: start;
 }
 
-.fuller-button.black {
-    box-shadow: inset 0 0 0.8em rgba(255, 255, 255, 0.3), 0 0 0.8em rgba(255, 255, 255, 0.3);
-    border: #fff solid 2px;
+.modal-credentials-proxy {
+    display: flex;
+    margin: 0 2% 0 2%;
 }
 
-.fuller-button.black:hover {
-    box-shadow: inset 0 0 0.5em rgba(0, 170, 170, 0.5), 0 0 1em rgba(0, 170, 170, 0.5);
-    border: #bdf1ec solid 2px;
-}
+@media (max-width: 425px) {
+    .modal-pricing {
+        flex-direction: column;
+        align-items: center;
+    }
 
-.fuller-button.blue:hover {
-    background-color: #e9fffd;
-    box-shadow: inset 0 0 0 rgba(0, 170, 170, 0.5), 0 0 1.5em rgba(0, 170, 170, 0.7);
-}
-.fuller-button.red {
-    box-shadow: inset 0 0 1em rgba(251, 81, 81, 0.4), 0 0 1em rgba(251, 81, 81, 0.4);
-    border: #fb5454 solid 2px;
-}
-.fuller-button.red:hover {
-    background-color: #fb5454;
-    box-shadow: inset 0 0 0 rgba(251, 81, 81, 0.4), 0 0 1.5em rgba(251, 81, 81, 0.6);
-}
-.fuller-button.white {
-    box-shadow: inset 0 0 0.8em rgba(255, 255, 255, 0.3), 0 0 0.8em rgba(255, 255, 255, 0.3);
-    border: #fff solid 2px;
-}
+    .modal-credentials-proxy {
+        flex-direction: column;
+    }
 
-.fuller-button.white:hover {
-    background-color: #a1eae3;
-    box-shadow: inset 0 0 0 rgba(255, 255, 255, 0.3), 0 0 1.2em rgba(255, 255, 255, 0.5);
+    .modal-pricing-form {
+        margin-top: 20px;
+    }
 }
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i');
 

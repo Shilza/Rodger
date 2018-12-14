@@ -6,6 +6,7 @@
     color: white;
     padding: 3%;
     border-radius: 1%;
+    min-width: 91px;
     width: 20%;
     max-width: 250px;
     display: flex;
@@ -62,16 +63,25 @@
     align-self: start;
 }
 
-@media(max-width: 425px) {
+@media(max-width: 320px) {
     .white-pricing-card,
     .blue-pricing-card,
     .deep-blue-pricing-card {
         width: 70%;
         margin-bottom: 20%;
+        padding: 10% 3% 10% 3%;
     }
+}
 
-    .pricing-card-includes-container {
-        font-size: 1em;
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 768px) {
+    .white-pricing-card,
+    .blue-pricing-card,
+    .deep-blue-pricing-card {
+        width: 60%;
+        margin-bottom: 20%;
+        padding: 10% 3% 10% 3%;
     }
 }
 
