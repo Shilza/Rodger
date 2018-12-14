@@ -4,12 +4,12 @@
             <span class="uk-label uk-label" style="margin-bottom: 8%">Credentials</span>
             <div class="uk-inline">
                 <span class="uk-form-icon" uk-icon="icon: user; ratio: 0.7"></span>
-                <input class="uk-input uk-form-small" id='login' type="text" placeholder="Login">
+                <input class="uk-input uk-form-small" id='login-{!! $type !!}' type="text" placeholder="Login">
             </div>
 
             <div class="uk-inline">
                 <span class="uk-form-icon" uk-icon="icon: lock; ratio: 0.7"></span>
-                <input class="uk-input uk-form-small" id='password' type="password"
+                <input class="uk-input uk-form-small" id="password-{!! $type !!}" type="password"
                        placeholder="Password">
             </div>
             <select>
@@ -28,7 +28,7 @@
                         proxy</label>
                     <div class="uk-inline uk-margin" id="modal-custom-proxy-input-{!! $type !!}" hidden>
                         <span class="uk-form-icon" uk-icon="icon: server; ratio: 0.7"></span>
-                        <input class="uk-input uk-form-small" id='login' type="text" placeholder="Enter proxy address">
+                        <input class="uk-input uk-form-small" id='proxy-address-{!! $type !!}' type="text" placeholder="Enter proxy address">
                     </div>
                 </div>
             </div>
