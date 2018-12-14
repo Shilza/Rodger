@@ -1,0 +1,32 @@
+.modal-pricing {
+    display: flex;
+    justify-content: space-around;
+}
+
+.modal-pricing-form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2% 0 2%;
+    min-width: 50%;
+    justify-content: start;
+}
+
+.modal-credentials-proxy {
+    display: flex;
+    margin: 0 2% 0 2%;
+}
+
+@media (max-width: 425px) {
+    .modal-pricing {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modal-credentials-proxy {
+        flex-direction: column;
+    }
+
+    .modal-pricing-form {
+        margin-top: 20px;
+    }
+}
