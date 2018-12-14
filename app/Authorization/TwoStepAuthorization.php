@@ -4,12 +4,13 @@ namespace App\Authorization;
 
 
 use App\Exceptions\AuthorizationException;
+use GuzzleHttp\Client;
 use GuzzleHttp\Cookie\CookieJar;
 
 abstract class TwoStepAuthorization extends AuthorizationHelper {
     abstract protected function authSocial(): void;
 
-    public function authorize(): CookieJar {
+    public function authorize(): Client {
         if (!$this->checkRR()) {
             if (!$this->checkSocial()) {
                 $this->authSocial();
@@ -21,6 +22,6 @@ abstract class TwoStepAuthorization extends AuthorizationHelper {
                 throw new AuthorizationException('RR auth failed');
         }
         $this->cookies->save($this->cookiePath);
-        return $this->cookies;
+        return $this->guzzle;
     }
 }

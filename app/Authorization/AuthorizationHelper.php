@@ -52,16 +52,26 @@ abstract class AuthorizationHelper {
     }
 
     /**
-     * @return CookieJar
-     * @throws AuthorizationException
+     * @return Client
      */
-    abstract public function authorize(): CookieJar;
+    abstract public function authorize(): Client;
+
+    /**
+     * @return Client
+     */
+    public function getClient() {
+        return $this->guzzle;
+    }
+
+    /**
+     * @return FileCookieJar
+     */
+    public function getCookies(): FileCookieJar {
+        return $this->cookies;
+    }
 
     protected function checkRR(): bool {
-        $a =
-            str_contains(($this->guzzle->get('https://rivalregions.com')->getBody() . ''), 'c_html');
-        var_dump($a);
-        return $a;
+        return str_contains(($this->guzzle->get('https://rivalregions.com')->getBody() . ''), 'c_html');;
     }
 
     protected static function cookiePath(?string $fingerprint): string {
