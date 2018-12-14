@@ -1,5 +1,5 @@
 <div class="toast-messages">
-    <div class="toast toast--yellow add-margin">
+    <div class="toast toast--red add-margin">
         <div class="toast__icon">
             <svg version="1.1" class="toast__svg" xmlns="http://www.w3.org/2000/svg"
                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 301.691 501.691"
@@ -11,7 +11,6 @@
     </svg>
         </div>
         <div class="toast__content">
-            <p class="toast__type">Error!</p>
             <p class="toast__message">{{ $slot }}</p>
         </div>
         <div class="toast__close">

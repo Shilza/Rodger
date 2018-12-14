@@ -67,10 +67,20 @@ html, body {
 
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i');
 
+.display-errors {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+}
+
 .toast-messages {
     display: flex;
     justify-content: center;
     font-family: 'Raleway', sans-serif;
+    z-index: 2;
 }
 
 .toast__cell{
@@ -130,7 +140,7 @@ html, body {
     font-size: 14px;
     margin-top: 0;
     margin-bottom: 0;
-    color: #878787;
+    font-weight: bold;
 }
 
 .toast__content{
@@ -144,15 +154,14 @@ html, body {
     top: 50%;
     width: 14px;
     cursor:pointer;
-    height: 14px;
     fill:#878787;
     transform: translateY(-50%);
 }
 
-.toast--yellow .toast__icon{
+.toast--red .toast__icon{
     background-color: #FF1414;
 }
 
-.toast--yellow:before{
+.toast--red:before{
     background-color: #FF1414;
 }
