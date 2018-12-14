@@ -364,6 +364,7 @@ html, body {
     .deep-blue-pricing-card {
         width: 70%;
         margin-bottom: 20%;
+        padding: 10% 3% 10% 3%;
     }
 
     .pricing-card-includes-container {

@@ -7,12 +7,12 @@
                 <input class="uk-input uk-form-small" id='login-{!! $type !!}' type="text" placeholder="Login">
             </div>
 
-            <div class="uk-inline">
+            <div class="uk-inline" style="margin: 10px 0 10px 0">
                 <span class="uk-form-icon" uk-icon="icon: lock; ratio: 0.7"></span>
                 <input class="uk-input uk-form-small" id="password-{!! $type !!}" type="password"
                        placeholder="Password">
             </div>
-            <select>
+            <select class="uk-select">
                 <option>Facebook</option>
                 <option>Google+</option>
                 <option>VK</option>
