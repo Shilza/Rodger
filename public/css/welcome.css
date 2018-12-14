@@ -87,7 +87,6 @@ html, body {
 
 
 .support-info {
-    min-height: 30%;
     height: auto;
     background: darkslategrey;
     display: flex;
@@ -302,6 +301,7 @@ html, body {
     color: white;
     padding: 3%;
     border-radius: 1%;
+    min-width: 91px;
     width: 20%;
     max-width: 250px;
     display: flex;
