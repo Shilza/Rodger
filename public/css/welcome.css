@@ -208,38 +208,6 @@ html, body {
     width: 64px;
     height: 64px;
 }
-.modal-pricing {
-    display: flex;
-    justify-content: space-around;
-}
-
-.modal-pricing-form {
-    display: flex;
-    flex-direction: column;
-    margin: 0 2% 0 2%;
-    min-width: 50%;
-    justify-content: start;
-}
-
-.modal-credentials-proxy {
-    display: flex;
-    margin: 0 2% 0 2%;
-}
-
-@media (max-width: 425px) {
-    .modal-pricing {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .modal-credentials-proxy {
-        flex-direction: column;
-    }
-
-    .modal-pricing-form {
-        margin-top: 20px;
-    }
-}
 
 .fuller-button {
     color: white;
@@ -369,7 +337,7 @@ html, body {
 }
 
 @media only screen
-and (min-device-width : 425px)
+and (min-device-width : 320px)
 and (max-device-width : 768px) {
     .white-pricing-card,
     .blue-pricing-card,
@@ -481,6 +449,38 @@ and (max-device-width : 768px) {
 @media (min-width: 2560px) {
     .pricing-title {
         font-size: 3em;
+    }
+}
+.modal-pricing {
+    display: flex;
+    justify-content: space-around;
+}
+
+.modal-pricing-form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2% 0 2%;
+    min-width: 50%;
+    justify-content: start;
+}
+
+.modal-credentials-proxy {
+    display: flex;
+    margin: 0 2% 0 2%;
+}
+
+@media (max-width: 425px) {
+    .modal-pricing {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modal-credentials-proxy {
+        flex-direction: column;
+    }
+
+    .modal-pricing-form {
+        margin-top: 20px;
     }
 }
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i');
