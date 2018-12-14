@@ -42,11 +42,11 @@ class AuthController extends Controller
                     break;
 
                 default:
-                    $returnHTML = view('welcome')->withErrors('Request method is unknown')->render();
+                    $returnHTML = view('login')->withErrors('Request method is unknown')->render();
                     return response()->json(['html' => $returnHTML], 200);
             }
         } catch (AuthorizationException $exception){
-            $returnHTML = view('welcome')->withErrors($exception->getMessage())->render();
+            $returnHTML = view('login')->withErrors($exception->getMessage())->render();
             return response()->json(['html' => $returnHTML], 200);
         }
 
