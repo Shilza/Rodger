@@ -21,13 +21,15 @@
 </head>
 <body>
 
-@if ( $errors->count() > 0 )
-    @foreach( $errors->all() as $message )
-        @component('components.toast')
-            {{ $message }}
-        @endcomponent
-    @endforeach
-@endif
+<div class="display-errors">
+    @if ( $errors->count() > 0 )
+        @foreach( $errors->all() as $message )
+            @component('components.toast')
+                {{ $message }}
+            @endcomponent
+        @endforeach
+    @endif
+</div>
 
 <div class="uk-flex uk-flex-center uk-flex-middle uk-flex-column" style="height: 100%; background: #454545">
 
