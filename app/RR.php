@@ -4,6 +4,10 @@ namespace App;
 
 
 use App\Authorization\AuthorizationHelper;
+use App\Service\AutoWorkService;
+use App\Service\DepartmentRequestEntity;
+use App\Service\DepartmentService;
+use App\Service\MilitaryAcademyBuildingService;
 
 class RR {
 
