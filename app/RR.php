@@ -27,4 +27,8 @@ class RR {
     public function autoWork(){
         (new AutoWorkService($this->guzzle))->process();
     }
+
+    public function buildDepartments(): void {
+        (new DepartmentService($this->guzzle, new DepartmentRequestEntity(['gold' => 10])))->process();
+    }
 }
