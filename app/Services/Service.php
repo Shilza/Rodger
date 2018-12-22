@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Service;
 
 use App\Utils\RR\HTMLParseHelper as Parser;
 
@@ -9,7 +9,7 @@ abstract class Service {
 
     private $c;
 
-    protected function getC(): string {
+    public function getC(): string {
         if (is_null($this->c))
             $this->c = Parser::find(
                 '/var c_html = \'(.*)\'/',

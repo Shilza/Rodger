@@ -1,12 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Toleckk
- * Date: 15.12.2018
- * Time: 2:49
- */
 
-namespace App;
+namespace App\Service;
 
 
 use GuzzleHttp\Client;

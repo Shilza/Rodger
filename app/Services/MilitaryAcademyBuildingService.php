@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Service;
 
 
 use App\Utils\RR\HTMLParseHelper as Parser;
@@ -14,8 +14,6 @@ class MilitaryAcademyBuildingService extends Service {
     private $residencyRegion;
 
     private $region;
-
-    private $c;
 
 
     public function __construct(Client $guzzle) {
